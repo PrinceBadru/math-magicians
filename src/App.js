@@ -1,12 +1,11 @@
-import './App.css';
 import Calculator from './components/Calculator';
+import Quote from './Quote/quote';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Calculator />
+      <Quote />
     </div>
   );
 }
-
-export default App;
