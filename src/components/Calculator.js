@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import calculate from '../logic/calculate';
 
 const Calculator = ({ onClick, state }) => (
   <div className="container">
