@@ -1,30 +1,147 @@
-import React from 'react';
-import Answers from './Answers';
+import PropTypes from 'prop-types';
 
-const Calculator = () => (
+const Calculator = ({ onClick, state }) => (
   <div className="container">
     <section className="section">
-      <Answers value={0} />
-      <div className="item-btn item1 norm-bg">AC</div>
-      <div className="item-btn item2 norm-bg">+/-</div>
-      <div className="item-btn item3 norm-bg">%</div>
-      <div className="item-btn item4 gold-bg">/</div>
-      <div className="item-btn item5 norm-bg">7</div>
-      <div className="item-btn item6 norm-bg">8</div>
-      <div className="item-btn item7 norm-bg">9</div>
-      <div className="item-btn item8 gold-bg">x</div>
-      <div className="item-btn item9 norm-bg">4</div>
-      <div className="item-btn item10 norm-bg">5</div>
-      <div className="item-btn item11 norm-bg">6</div>
-      <div className="item-btn item12 gold-bg">+</div>
-      <div className="item-btn item13 norm-bg">1</div>
-      <div className="item-btn item14 norm-bg">2</div>
-      <div className="item-btn item15 norm-bg">3</div>
-      <div className="item-btn item16 gold-bg">-</div>
-      <div className="item-btn item17 norm-bg">0</div>
-      <div className="item-btn item18 gold-bg">=</div>
+      <div className="results gray-bg flex-container">
+        <div className="flexed-items">{state.total || null}</div>
+        <div className="flexed-items">{state.operation}</div>
+        <div className="flexed-items">{state.next}</div>
+      </div>
+
+      <button
+        type="button"
+        className="items item1 norm-bg"
+        onClick={() => onClick('AC')}
+      >
+        AC
+      </button>
+      <button
+        type="button"
+        className="items item2 norm-bg"
+        onClick={() => onClick('+/-')}
+      >
+        +/-
+      </button>
+      <button
+        type="button"
+        className="items item3 norm-bg"
+        onClick={() => onClick('%')}
+      >
+        %
+      </button>
+      <button
+        type="button"
+        className="items item4 golden-bg"
+        onClick={() => onClick('/')}
+      >
+        /
+      </button>
+      <button
+        type="button"
+        className="items item5 norm-bg"
+        onClick={() => onClick('7')}
+      >
+        7
+      </button>
+      <button
+        type="button"
+        className="items item6 norm-bg"
+        onClick={() => onClick('8')}
+      >
+        8
+      </button>
+      <button
+        type="button"
+        className="items item7 norm-bg"
+        onClick={() => onClick('9')}
+      >
+        9
+      </button>
+      <button
+        type="button"
+        className="items item8 golden-bg"
+        onClick={() => onClick('x')}
+      >
+        x
+      </button>
+      <button
+        type="button"
+        className="items item9 norm-bg"
+        onClick={() => onClick('4')}
+      >
+        4
+      </button>
+      <button
+        type="button"
+        className="items item10 norm-bg"
+        onClick={() => onClick('5')}
+      >
+        5
+      </button>
+      <button
+        type="button"
+        className="items item11 norm-bg"
+        onClick={() => onClick('6')}
+      >
+        6
+      </button>
+      <button
+        type="button"
+        className="items item12 golden-bg"
+        onClick={() => onClick('+')}
+      >
+        +
+      </button>
+      <button
+        type="button"
+        className="items item13 norm-bg"
+        onClick={() => onClick('1')}
+      >
+        1
+      </button>
+      <button
+        type="button"
+        className="items item14 norm-bg"
+        onClick={() => onClick('2')}
+      >
+        2
+      </button>
+      <button
+        type="button"
+        className="items item15 norm-bg"
+        onClick={() => onClick('3')}
+      >
+        3
+      </button>
+      <button
+        type="button"
+        className="items item16 golden-bg"
+        onClick={() => onClick('-')}
+      >
+        -
+      </button>
+      <button
+        type="button"
+        className="items item17 norm-bg"
+        onClick={() => onClick('0')}
+      >
+        0
+      </button>
+      <button
+        type="button"
+        className="items item18 golden-bg"
+        onClick={() => onClick('=')}
+      >
+        =
+      </button>
     </section>
   </div>
 );
 
 export default Calculator;
+
+Calculator.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  state: PropTypes.string.isRequired,
+};
