@@ -1,10 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(250, 229, 210);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 .quote-container {
   width: 420px;
+  margin: 70px auto;
   background-color: rgb(221, 176, 108);
   border: 2px solid orange;
   border-radius: 6px;
   box-shadow: -1px 8px 22px -6px rgba(0, 0, 0, 0.4);
-  margin-bottom: 50px;
 }
 
 .title-quote {
