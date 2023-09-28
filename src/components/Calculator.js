@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './style.css';
 import InputNumber from './Input';
 import calculate from '../logic/calculate';
 
@@ -16,6 +17,7 @@ const Calculator = () => {
   };
   return (
     <>
+      <p className="math-title">Let`s do some math!</p>
       <div className="container">
         <InputNumber className="numInput" value={numbers.next || numbers.operation || numbers.total || '0'} />
         <div className="rows-contanier">
@@ -29,8 +31,8 @@ const Calculator = () => {
             <button className="num-buttons" type="button" onClick={() => ClickEventHandlers('%')}>
               %
             </button>
-            <button className="sign-btn" type="button" onClick={() => ClickEventHandlers('÷')}>
-              ÷
+            <button className="sign-btn" type="button" onClick={() => ClickEventHandlers('+')}>
+              +
             </button>
           </div>
           <div className="horizontal-rows">
