@@ -9,7 +9,7 @@ export default function ShowQuote() {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      const category = 'amazing';
+      const category = 'computers';
       const apiKey = 'bnqnnOM1gde1qM8Farv5hA==Z9wth7aFcidEsatZ';
       try {
         const res = await fetch(
@@ -39,7 +39,7 @@ export default function ShowQuote() {
   return (
     <>
       <div className="quote-container">
-        <div className="title-quote">Fantastic Quotes </div>
+        <div className="title-quote">Amazing Quotes ⭐️</div>
         <p className="quote">{retell.quote}</p>
         <h2 className="author">
           👤 By:
