@@ -4,29 +4,36 @@
 }
 
 body {
+  background-color: rgb(250, 229, 210);
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
+.math-title {
+  font-size: 18px;
+  text-align: justify;
+}
+
 .container {
-  width: 420px;
-  margin: 100px auto;
+  width: 422px;
+  margin: 69px auto;
   box-shadow: -1px 8px 22px -6px rgba(0, 0, 0, 0.4);
-  border-radius: 6px;
+  border: 2px solid orange;
+  border-radius: 7px;
 }
 
 .numInput {
-  height: 40px;
-  font-size: 20px;
+  height: 81px;
+  font-size: 21px;
   font-weight: 700;
   text-align: right;
   color: white;
   background-color: #92939f;
-  border-radius: 6px;
+  border-radius: 5px;
   border: none;
   outline: none;
-  padding: 50px 0 0 11px;
+  padding: 40px 0 0 11px;
   justify-content: space-around;
 }
 
@@ -46,18 +53,18 @@ body {
 }
 
 .sign-btn {
-  font-size: 20px;
-  padding: 12px;
+  font-size: 21px;
+  padding: 11px;
   border: 1px solid rgb(229, 223, 223);
-  border-radius: 4px;
+  border-radius: 5px;
   width: 25%;
   background-color: orange;
   cursor: pointer;
 }
 
 .num-zero {
-  font-size: 20px;
-  padding: 12px;
+  font-size: 21px;
+  padding: 13px;
   border: 1px solid rgb(229, 223, 223);
   border-radius: 6px;
   width: 50%;
@@ -68,4 +75,23 @@ body {
 /* hover-part */
 button:hover {
   border: 0.4px solid orange;
+}
+
+/* home part */
+.home-cont {
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 21px;
+  margin: 32px auto;
+  width: 593px;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 19px;
+}
+
+.par {
+  font-size: 18px;
 }
